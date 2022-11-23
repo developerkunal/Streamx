@@ -13,7 +13,7 @@ import { TagsInput } from "react-tag-input-component";
 export default function MyNfts() {
     const NFT_STORAGE_TOKEN = process.env.NEXT_PUBLIC_NFT_STORAGE_TOKEN
     const client = new NFTStorage({ token: NFT_STORAGE_TOKEN })
-    const CONTRACT = process.env.CONTRACT;
+    const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT;
 
     const [isLoading, setIsLoading] = useState(false)
     const [fileUrl, setFileUrl] = useState("")

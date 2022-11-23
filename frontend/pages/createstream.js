@@ -10,8 +10,8 @@ import Streamx from '../contracts/Streamx.json'
 
 import axios from 'axios'
 export default function MyNfts() {
-    const live_peer = process.env.LIVE_PEER
-    const CONTRACT = process.env.CONTRACT
+    const live_peer = process.env.NEXT_PUBLIC_LIVE_PEER
+    const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT
     const [isLoading, setIsLoading] = useState(false)
     const [mycontract,setMycontract] = useState("")
 

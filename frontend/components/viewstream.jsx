@@ -10,9 +10,9 @@ import { useRouter } from 'next/router'
 import  axios from "axios"
 
 export default function ViewStream( ) {
-    const CONTRACT = process.env.CONTRACT;
+    const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT;
 
-    const live_peer = process.env.LIVE_PEER
+    const live_peer = process.env.NEXT_PUBLIC_LIVE_PEER
 
     const router = useRouter()
     const [name ,setName] = useState();

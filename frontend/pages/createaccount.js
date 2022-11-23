@@ -11,7 +11,7 @@ import { NFTStorage, File, Blob } from 'nft.storage'
 import { TagsInput } from "react-tag-input-component"; 
 
 export default function MyNfts() {
-    const NFT_STORAGE_TOKEN = process.env.NFT_STORAGE_TOKEN
+    const NFT_STORAGE_TOKEN = process.env.NEXT_PUBLIC_NFT_STORAGE_TOKEN
     const client = new NFTStorage({ token: NFT_STORAGE_TOKEN })
     const CONTRACT = process.env.CONTRACT;
 

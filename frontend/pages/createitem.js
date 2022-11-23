@@ -11,7 +11,7 @@ import { videonft } from '@livepeer/video-nft'
 import { NFTStorage, File, Blob } from 'nft.storage'
 
 export default function MyNfts() {
-    const NFT_STORAGE_TOKEN = process.env.NFT_STORAGE_TOKEN
+    const NFT_STORAGE_TOKEN = process.env.NEXT_PUBLIC_NFT_STORAGE_TOKEN
     const client = new NFTStorage({ token: NFT_STORAGE_TOKEN })
     const CONTRACT = process.env.CONTRACT;
 
@@ -19,7 +19,7 @@ export default function MyNfts() {
     const [fileUrl, setFileUrl] = useState("")
     const router = useRouter()
     const [mycontract,setMycontract] = useState("")
-    const vodApi = new videonft.minter.Api({ auth:{apiKey:process.env.LIVE_PEER}});
+    const vodApi = new videonft.minter.Api({ auth:{apiKey:process.env.NEXT_PUBLIC_LIVE_PEER}});
     const [file, setFile] = useState("");
     const [images, setImage] = useState("");
 

@@ -10,7 +10,7 @@ import Swal from "sweetalert2"
 export default function NftGrid() {
 
     const [allItems, setAllItems] = useState([])
-    const CONTRACT = process.env.CONTRACT;
+    const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT;
 
     async function fetchNfts() {
         const provider = new ethers.providers.Web3Provider(window.ethereum)

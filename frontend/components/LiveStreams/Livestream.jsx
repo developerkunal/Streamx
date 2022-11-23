@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 
 export default function Livestreams() {
-    const live_peer = process.env.LIVE_PEER
+    const live_peer = process.env.NEXT_PUBLIC_LIVE_PEER
     const router = useRouter()
     const [allItems, setAllItems] = useState([])
     async function fetchStreams(){

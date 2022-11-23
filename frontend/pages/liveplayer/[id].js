@@ -8,7 +8,7 @@ import Navigation from "../../components/Navigation"
 // Calling the api from server side using 'getServerSideProps' and passing in existing
 // routes from 'getStaticPaths' for dynamic routing
 export async function getServerSideProps({ params }) {
-    const live_peer = process.env.LIVE_PEER
+    const live_peer = process.env.NEXT_PUBLIC_LIVE_PEER
 
   const [assetRes] = await Promise.all([
     fetch(`https://livepeer.studio/api/stream/${params.id}`, {

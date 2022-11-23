@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async function handler(req, res) {
     const { name } = req.body;
-    const live_peer = process.env.LIVE_PEER
+    const live_peer = process.env.NEXT_PUBLIC_LIVE_PEER
 
     try {
       // Calling api and passing in the name of the asset from the 'uploadLocal' form

@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 import Streamx from '../contracts/Streamx.json'
 
 export default function Navigation() {
-    const CONTRACT = process.env.CONTRACT;
+    const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT;
 
     const router = useRouter()
     const [address, setAddress] = useState()

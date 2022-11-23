@@ -8,7 +8,7 @@ import Swal from "sweetalert2"
 
 
 export default function Videos() {
-    const CONTRACT = process.env.CONTRACT;
+    const CONTRACT = process.env.NEXT_PUBLIC_CONTRACT;
     const [allItems, setAllItems] = useState([])
     async function fetchcontracts() {
        try{ const provider = new ethers.providers.Web3Provider(window.ethereum)

@@ -9,7 +9,7 @@ export const config = {
 }
 
 export default (req, res) => {
-    const live_peer = process.env.LIVE_PEER
+    const live_peer = process.env.NEXT_PUBLIC_LIVE_PEER
 
     return new Promise((resolve, reject) => {
         proxy.web(req, res, { target: 'https://livepeer.com',

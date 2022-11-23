@@ -3,3 +3,4 @@
 .next
 secret.json
 package-lock.json
+.env.local

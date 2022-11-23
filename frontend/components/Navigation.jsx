@@ -14,7 +14,7 @@ export default function Navigation() {
     const router = useRouter()
     const [address, setAddress] = useState()
     const [isConnected, setIsConnected] = useState(false)
-    const [profile,setProfile] = useState(false);
+    const [profile,setProfile] = useState();
     const [streamstatus,setStreamstatus] = useState(false);
     const [mycontract,setMycontract] = useState("")
 
@@ -93,7 +93,8 @@ export default function Navigation() {
         }
     } 
     async function fetchContract(){
-        try{
+        if(profile===false){        
+            try{
             const provider = new ethers.providers.Web3Provider(window.ethereum)
             const signer = provider.getSigner()
             const walletAddress = await signer.getAddress()
@@ -104,13 +105,14 @@ export default function Navigation() {
         }catch(err){
             Swal.fire({
                 title: 'Error',
-                text: "Connect Wallet",
+                text: "Connect Wallets",
                 icon: 'error',
                 confirmButtonText: 'close',
             }).then(() => {
                 router.push('/')
             })
-        }
+        }}
+
     }
     async function onChainChange() {
         if (window.ethereum) {
